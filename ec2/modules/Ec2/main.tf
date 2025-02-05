@@ -1,7 +1,3 @@
-provider "aws" {
-  region  = var.region
-}
-
 #generate the pem file for our key pair
 
 resource "tls_private_key" "pem-key" {
