@@ -21,7 +21,7 @@ module "vpc" {
 }
 
 module "Ec2" {
-    source = "https://github.com/laura-eng-sys/jenkins-terraform-ec2/tree/main/ec2/modules/Ec2"   
+    source = "git::https://github.com/laura-eng-sys/jenkins-terraform-ec2.git"   
   ec2-ami = var.ec2-ami
   instance-type = var.instance-type
   key-name = var.key-name
