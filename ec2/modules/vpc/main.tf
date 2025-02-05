@@ -1,3 +1,7 @@
+provider "aws" {
+  region  = var.region
+}
+
 #create vpc
 resource "aws_vpc" "vpc" {
   cidr_block = var.vpc_cidr
