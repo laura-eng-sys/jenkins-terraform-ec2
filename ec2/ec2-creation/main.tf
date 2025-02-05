@@ -7,7 +7,7 @@ provider "aws" {
 #create vpc
 
 module "vpc" {
-  source = "https://github.com/laura-eng-sys/jenkins-terraform-ec2/tree/main/ec2/modules/vpc"
+  source = "git::https://github.com/laura-eng-sys/jenkins-terraform-ec2/tree/main/ec2/modules/vpc"
 
   vpc_cidr= var.vpc_cidr
   vpc-tags= var.vpc-tags
