@@ -5,7 +5,6 @@ terraform {
     key       = "demo/myproject/terraform.tfstate"
     region    = "us-east-1"
     encrypt = true
-    profile   = "terraform-user"
     
   }
 }
