@@ -1,4 +1,4 @@
-pipeline {
+cpipeline {
     agent any
     environment {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
@@ -49,10 +49,10 @@ pipeline {
                 }
             }
         }
-        stage('terraform destroy s3'){
+        stage('terraform destroy ec2'){
             steps{
                 script{
-                    dir('modules/s3-creation'){
+                    dir('ec2/ec2-creation'){
                          sh 'terraform destroy --auto-approve'
                     }
                 }
