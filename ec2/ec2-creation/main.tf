@@ -7,7 +7,7 @@ provider "aws" {
 #create vpc
 
 module "vpc" {
-  source = "../modules/vpc"
+  source = "/ec2/modules/vpc"
 
   vpc_cidr= var.vpc_cidr
   vpc-tags= var.vpc-tags
@@ -21,7 +21,7 @@ module "vpc" {
 }
 
 module "Ec2" {
-    source = "../modules/Ec2"   
+    source = "/ec2/modules/Ec2"   
   ec2-ami = var.ec2-ami
   instance-type = var.instance-type
   key-name = var.key-name
