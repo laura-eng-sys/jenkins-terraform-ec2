@@ -13,37 +13,37 @@ pipeline {
                 }
             }
         }
-        stage('Initializing s3'){
+        stage('Initializing ec2'){
             steps{
                 script{
-                    dir('modules/s3-creation'){
+                    dir('ec2/ec2-creation'){
                          sh 'terraform init'
                     }
                 }
             }
         }
-        stage('Validating s3'){
+        stage('validating ec2'){
             steps{
                 script{
-                    dir('modules/s3-creation'){
+                    dir('ec2/ec2-creation'){
                          sh 'terraform validate'
                     }
                 }
             }
         }
-        stage('terraform plan s3'){
+        stage('terraform plan ec2'){
             steps{
                 script{
-                    dir('modules/s3-creation'){
+                    dir('ec2/ec2-creation'){
                          sh 'terraform plan'
                     }
                 }
             }
         }
-         stage('terraform apply s3'){
+         stage('terraform apply ec2'){
             steps{
                 script{
-                    dir('modules/s3-creation'){
+                    dir('ec2/ec2-creation'){
                          sh 'terraform apply --auto-approve'
                     }
                 }
