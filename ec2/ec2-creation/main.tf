@@ -21,8 +21,8 @@ module "vpc" {
 
 }
 
-module "ec2" {
-    source = "../modules/ec2"   
+module "Ec2" {
+    source = "../modules/Ec2"   
   ec2-ami = var.ec2-ami
   instance-type = var.instance-type
   key-name = var.key-name
